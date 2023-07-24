@@ -2,37 +2,133 @@
   text-align: center;
 }
 
+body{
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #fc00ff);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-list-Meme {
+	padding-top: 40px;
+	margin-left: 20px;
+  margin-right: 20px;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	gap: 40px;
+	background-color: rgb(54, 54, 143);
+	text-decoration: none;
+}
+.card-Meme {
+	cursor: pointer;
+	text-decoration: none;
+	
+}
+
+.card-img {
+	background-color: rgb(54, 54, 143);
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	height: 40px;
+}
+
+.imgmeme {
+  width: 100px;
+  height: 50px;
+}
+
+.container-img {
+  position:relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}   
+
+.textoArriba{
+    width: 90%;
+    margin: 10px 10px 10px 10px;
+    position:absolute;
+    padding:10px 0px 10px 0px;
+}
+
+.textoAbajo{
+	width: 90%;
+    bottom: 1%;
+    position:absolute;
+    margin: 10px 10px 10px 10px;
+    padding:10px 0px 10px 0px;
+
+}
+
+.card-title {
+	color: #fbfafa;
+	text-decoration: none;
+}
+
+.contenedorInputs{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inputs{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputs input{
+  margin: 0 5px;
 }
+
+.inputText{
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+	.card-list-Meme {
+		
+		grid-template-columns: repeat(4, 1fr);
+		
+	}
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1149px) {
+	.card-list-Meme {
+		
+		grid-template-columns: repeat(5, 1fr);
+		
+	}
+
+  }
+
+  @media (min-width: 1150px) and (max-width: 1348px){
+	.card-list-Meme {
+		
+		grid-template-columns: repeat(8, 1fr);
+		
+	}
+
+	
+  }
+
+  @media (min-width: 1349px) {
+	.card-list-Meme {
+		
+		grid-template-columns: repeat(10, 1fr);
+		
+	}
+
+  }
